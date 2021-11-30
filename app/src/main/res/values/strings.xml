@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Расписание студента</string>
+
+    <!--System-->
+    <string name="system_databaseError">Не удалось получить данные из базы данных\nПроверьте подключение к интернету</string>
+    <string name="system_authError">Не удалось авторизироваться\nПроверьте подключение к интернету</string>
+
+    <!--Login screen-->
+    <string name="login_text_login">Введите почту</string>
+    <string name="login_text_password">Введите пароль</string>
+    <string name="login_button_enter">Войти</string>
+    <string name="login_toast_wrongLogin">Ошибка: Не указана почта</string>
+    <string name="login_toast_wrongPassword">Ошибка: Пароль должен содержать минимум шесть символов!</string>
+
+    <!--Admin panel main menu screen-->
+    <string name="adminPanelMain_text_hello">Добро пожаловать в панель администрирования</string>
+    <string name="adminPanelMain_button_addGroup">Добавить группу</string>
+    <string name="adminPanelMain_button_deleteGroup">Удалить выделенное</string>
+
+    <!--Admin edit group screen-->
+    <string name="adminEditGroup_text_currentGroup">Группа: </string>
+    <string name="adminEditGroup_button_addWeek">Добавить неделю</string>
+
+    <!--Admin edit week screen-->
+    <string name="adminEditWeek_text_monday">Понидельник</string>
+    <string name="adminEditWeek_text_tuesday">Вторник</string>
+    <string name="adminEditWeek_text_wednesday">Среда</string>
+    <string name="adminEditWeek_text_thursday">Четверг</string>
+    <string name="adminEditWeek_text_friday">Пятница</string>
+    <string name="adminEditWeek_text_saturday">Суббота</string>
+    <string name="adminEditWeek_text_sunday">Воскресенье</string>
+    <string name="adminEditWeek_button_edit">Редактировать</string>
+    <string name="adminEditWeek_button_save">Сохранить</string>
+
+</resources>
