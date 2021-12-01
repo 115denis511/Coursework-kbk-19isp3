@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserWatchDayActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView149"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text="1: 09:00 - 10:20"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView147"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView148"
+                    app:layout_constraintTop_toBottomOf="@+id/textView148" />
+
+                <TextView
+                    android:id="@+id/textView148"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView149"
+                    app:layout_constraintTop_toBottomOf="@+id/textView149" />
+
+                <TextView
+                    android:id="@+id/textView146"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="2: 10:30 - 11:50"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView147"
+                    app:layout_constraintTop_toBottomOf="@+id/textView147" />
+
+                <TextView
+                    android:id="@+id/textView144"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView145"
+                    app:layout_constraintTop_toBottomOf="@+id/textView145" />
+
+                <TextView
+                    android:id="@+id/textView145"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView146"
+                    app:layout_constraintTop_toBottomOf="@+id/textView146" />
+
+                <TextView
+                    android:id="@+id/textView139"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView140"
+                    app:layout_constraintTop_toBottomOf="@+id/textView140" />
+
+                <TextView
+                    android:id="@+id/textView138"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView139"
+                    app:layout_constraintTop_toBottomOf="@+id/textView139" />
+
+                <TextView
+                    android:id="@+id/textView140"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="4: 13:50 - 15:10"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView142"
+                    app:layout_constraintTop_toBottomOf="@+id/textView142" />
+
+                <TextView
+                    android:id="@+id/textView129"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView130"
+                    app:layout_constraintTop_toBottomOf="@+id/textView130" />
+
+                <TextView
+                    android:id="@+id/textView130"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView131"
+                    app:layout_constraintTop_toBottomOf="@+id/textView131" />
+
+                <TextView
+                    android:id="@+id/textView131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="7: 17:20 - 18:40"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView132"
+                    app:layout_constraintTop_toBottomOf="@+id/textView132" />
+
+                <TextView
+                    android:id="@+id/textView134"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="6: 16:50 - 17:10"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView137"
+                    app:layout_constraintTop_toBottomOf="@+id/textView137" />
+
+                <TextView
+                    android:id="@+id/textView133"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView134"
+                    app:layout_constraintTop_toBottomOf="@+id/textView134" />
+
+                <TextView
+                    android:id="@+id/textView132"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView133"
+                    app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+                <TextView
+                    android:id="@+id/textView137"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView136"
+                    app:layout_constraintTop_toBottomOf="@+id/textView136" />
+
+                <TextView
+                    android:id="@+id/textView135"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="5: 15:20 - 16:40"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView138"
+                    app:layout_constraintTop_toBottomOf="@+id/textView138" />
+
+                <TextView
+                    android:id="@+id/textView136"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView135"
+                    app:layout_constraintTop_toBottomOf="@+id/textView135" />
+
+                <TextView
+                    android:id="@+id/textView143"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="3: 12:20 - 13:40"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView144"
+                    app:layout_constraintTop_toBottomOf="@+id/textView144" />
+
+                <TextView
+                    android:id="@+id/textView141"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonName"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView143"
+                    app:layout_constraintTop_toBottomOf="@+id/textView143" />
+
+                <TextView
+                    android:id="@+id/textView142"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/adminEditDay_text_lessonTeacher"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView141"
+                    app:layout_constraintTop_toBottomOf="@+id/textView141" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_oneLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView148"
+                    app:layout_constraintTop_toTopOf="@+id/textView148" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_oneLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_oneLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView147" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_twoLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView145"
+                    app:layout_constraintTop_toTopOf="@+id/textView145" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_twoLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_twoLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView144" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_threeLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView141"
+                    app:layout_constraintTop_toTopOf="@+id/textView141" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_threeLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_threeLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_fourLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView139"
+                    app:layout_constraintTop_toTopOf="@+id/textView139" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_fourLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_fourLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView138" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_fiveLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView136"
+                    app:layout_constraintTop_toTopOf="@+id/textView136" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_fiveLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_fiveLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView137" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_sixLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView133"
+                    app:layout_constraintTop_toTopOf="@+id/textView133" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_sixLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_sixLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView132" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_sevenLessonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView130"
+                    app:layout_constraintTop_toTopOf="@+id/textView130" />
+
+                <TextView
+                    android:id="@+id/userWatchDay_text_sevenLessonTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/system_placeholder"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/userWatchDay_text_sevenLessonName"
+                    app:layout_constraintTop_toTopOf="@+id/textView129" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

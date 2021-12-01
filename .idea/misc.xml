@@ -3,12 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_user_watch_day.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_admin_add_user.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_admin_edit_day.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_admin_edit_group.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_admin_edit_week.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_admin_panel_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Courseworkkbk19isp3/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_admin_edit_day.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_admin_edit_group.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_user_set_group.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_user_watch_day.xml" value="0.33" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_user_watch_group.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/Coursework-kbk-19isp3/app/src/main/res/layout/activity_user_watch_week.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

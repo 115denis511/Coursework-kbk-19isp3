@@ -19,6 +19,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -26,22 +29,27 @@ import java.util.Calendar;
 public class AdminEditGroupActivity extends AppCompatActivity {
 
     public dbGroup mGroup;
+    public String mGroupName;
     public ArrayList<String> mWeeks;
     public int mEditableWeekIndex;
     public Calendar mCalendar;
+    public DatabaseReference dbRef;
 
     public TextView mTextCurrentGroup;
     public ListView mListViewWeeks;
     public ArrayAdapter<String> mWeeksAdapter;
     public Button mButtonAddWeek;
+    public Button mButtonSave;
 
     ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    Intent intent = result.getData();
-                    dbWeek week = (dbWeek) intent.getSerializableExtra("week");
-                    mGroup.weeks.set(mEditableWeekIndex, week);
+                    if (result.getResultCode() != 0) {
+                        Intent intent = result.getData();
+                        dbWeek week = (dbWeek) intent.getSerializableExtra("week");
+                        mGroup.weeks.set(mEditableWeekIndex, week);
+                    }
                 }
             });
 
@@ -53,10 +61,12 @@ public class AdminEditGroupActivity extends AppCompatActivity {
         Bundle args = getIntent().getExtras();
 
         mGroup = (dbGroup) args.getSerializable("group");
+        mGroupName = (String) args.getSerializable("name");
         mWeeks = new ArrayList<String>();
         rebuildWeeksNamesArray();
         mEditableWeekIndex = 0;
         mCalendar = Calendar.getInstance();
+        dbRef = FirebaseDatabase.getInstance().getReference("Groups");
 
         mTextCurrentGroup = findViewById(R.id.adminEditGroup_text_currentGroup);
         mTextCurrentGroup.setText(getResources().getString(R.string.adminEditGroup_text_currentGroup) + " " + args.getString("name"));
@@ -64,6 +74,7 @@ public class AdminEditGroupActivity extends AppCompatActivity {
         mWeeksAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mWeeks);
         mListViewWeeks.setAdapter(mWeeksAdapter);
         mButtonAddWeek = findViewById(R.id.adminEditGroup_button_addWeek);
+        mButtonSave = findViewById(R.id.adminEditGroup_button_save);
 
         mButtonAddWeek.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +84,14 @@ public class AdminEditGroupActivity extends AppCompatActivity {
                         mCalendar.get(Calendar.MONTH),
                         mCalendar.get(Calendar.DAY_OF_MONTH))
                         .show();
+            }
+        });
+
+        mButtonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbRef.child("list").child(mGroupName).setValue(mGroup);
+                finish();
             }
         });
 

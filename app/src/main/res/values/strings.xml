@@ -4,11 +4,14 @@
     <!--System-->
     <string name="system_databaseError">Не удалось получить данные из базы данных\nПроверьте подключение к интернету</string>
     <string name="system_authError">Не удалось авторизироваться\nПроверьте подключение к интернету</string>
+    <string name="system_emptyTextFieldError">Поле не должно быть пустым</string>
+    <string name="system_placeholder">PLACEHOLDER</string>
 
     <!--Login screen-->
     <string name="login_text_login">Введите почту</string>
     <string name="login_text_password">Введите пароль</string>
     <string name="login_button_enter">Войти</string>
+    <string name="login_button_singUp">Регистрация</string>
     <string name="login_toast_wrongLogin">Ошибка: Не указана почта</string>
     <string name="login_toast_wrongPassword">Ошибка: Пароль должен содержать минимум шесть символов!</string>
 
@@ -20,6 +23,7 @@
     <!--Admin edit group screen-->
     <string name="adminEditGroup_text_currentGroup">Группа: </string>
     <string name="adminEditGroup_button_addWeek">Добавить неделю</string>
+    <string name="adminEditGroup_button_save">Сохранить</string>
 
     <!--Admin edit week screen-->
     <string name="adminEditWeek_text_monday">Понидельник</string>
@@ -31,5 +35,14 @@
     <string name="adminEditWeek_text_sunday">Воскресенье</string>
     <string name="adminEditWeek_button_edit">Редактировать</string>
     <string name="adminEditWeek_button_save">Сохранить</string>
+
+    <!--Admin edit day screen-->
+    <string name="adminEditDay_button_save">Сохранить</string>
+    <string name="adminEditDay_text_lessonName">Предмет:</string>
+    <string name="adminEditDay_text_lessonTeacher">Преподаватель:</string>
+
+    <!--User set group screen-->
+    <string name="userSetGroup_text_setYourGroup">Выберите группу</string>
+
 
 </resources>

@@ -8,8 +8,8 @@ public class dbLesson implements Serializable {
     public String teacher;
 
     dbLesson(){
-        name = "lesson";
-        teacher = "teacher";
+        name = "";
+        teacher = "";
     }
 
     public String getName() {

@@ -36,4 +36,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/adminEditGroup_button_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/adminEditGroup_button_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adminEditGroup_button_addWeek"
+        app:layout_constraintTop_toTopOf="@+id/adminEditGroup_button_addWeek" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText editLogin;
     public EditText editPassword;
     public Button buttonEnter;
+    public Button mButtonSingUp;
 
     public FirebaseAuth firebaseAuth;
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         editLogin = findViewById(R.id.login_editText_login);
         editPassword = findViewById(R.id.login_editText_password);
         buttonEnter = findViewById(R.id.login_button_enter);
+        mButtonSingUp = findViewById(R.id.login_button_singUp);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -52,6 +54,22 @@ public class MainActivity extends AppCompatActivity {
                     showToast(getResources().getString(R.string.login_toast_wrongPassword));
                 } else {
                     logIn(login, password);
+                }
+            }
+        });
+
+        mButtonSingUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String login = editLogin.getText().toString();
+                String password = editPassword.getText().toString();
+
+                if (login.length() < 1){
+                    showToast(getResources().getString(R.string.login_toast_wrongLogin));
+                } else if (password.length() < 6){
+                    showToast(getResources().getString(R.string.login_toast_wrongPassword));
+                } else {
+                    signUp(login, password);
                 }
             }
         });
@@ -82,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
                                     if (uidGroup.equals("Admin")) {
                                         goActivityAdminPanel();
+                                    } else {
+                                        goActivityUserSetGroup();
                                     }
                                 }
                             }
@@ -93,6 +113,26 @@ public class MainActivity extends AppCompatActivity {
             });
     }
 
+    public void signUp(String login, String password){
+        firebaseAuth.createUserWithEmailAndPassword(login, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    String uid = user.getUid().toString();
+
+                    FirebaseDatabase db = FirebaseDatabase.getInstance();
+                    DatabaseReference ref = db.getReference("Users").child(uid).child("Group");
+                    ref.setValue("User");
+
+                    goActivityUserSetGroup();
+                } else {
+                    showToast(getResources().getString(R.string.system_authError));
+                }
+            }
+        });
+    }
+
     public void showToast(String text){
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
         toast.show();
@@ -101,6 +141,11 @@ public class MainActivity extends AppCompatActivity {
     public void goActivityAdminPanel()
     {
         Intent intent = new Intent(this, AdminPanelMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void goActivityUserSetGroup(){
+        Intent intent = new Intent(this, UserSetGroupActivity.class);
         startActivity(intent);
     }
 }

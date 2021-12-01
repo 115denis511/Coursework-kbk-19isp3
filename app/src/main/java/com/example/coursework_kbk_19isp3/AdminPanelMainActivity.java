@@ -112,10 +112,17 @@ public class AdminPanelMainActivity extends AppCompatActivity {
                     dbRef.child("list").child(editGroupName.getText().toString()).setValue(tempGroup);
                     editGroupName.setText("");
                 } else {
-                    showToast("error_placeholder");
+                    showToast(getResources().getString(R.string.system_emptyTextFieldError));
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        int pid = android.os.Process.myPid();
+        android.os.Process.killProcess(pid);
     }
 
     public void showToast(String text){

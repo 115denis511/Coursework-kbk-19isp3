@@ -31,31 +31,33 @@ public class AdminEditWeekActivity extends AppCompatActivity {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     Intent intent = result.getData();
-                    dbDay day = (dbDay) intent.getSerializableExtra("day");
-                    switch (mEditableDayOfWeek){
-                        case "monday":
-                            mWeek.monday = day;
-                            break;
-                        case "tuesday":
-                            mWeek.tuesday = day;
-                            break;
-                        case "wednesday":
-                            mWeek.wednesday = day;
-                            break;
-                        case "thursday":
-                            mWeek.thursday = day;
-                            break;
-                        case "friday":
-                            mWeek.friday = day;
-                            break;
-                        case "saturday":
-                            mWeek.saturday = day;
-                            break;
-                        case "sunday":
-                            mWeek.sunday = day;
-                            break;
-                        default:
-                            break;
+                    if (result.getResultCode() != 0) {
+                        dbDay day = (dbDay) intent.getSerializableExtra("day");
+                        switch (mEditableDayOfWeek) {
+                            case "monday":
+                                mWeek.monday = day;
+                                break;
+                            case "tuesday":
+                                mWeek.tuesday = day;
+                                break;
+                            case "wednesday":
+                                mWeek.wednesday = day;
+                                break;
+                            case "thursday":
+                                mWeek.thursday = day;
+                                break;
+                            case "friday":
+                                mWeek.friday = day;
+                                break;
+                            case "saturday":
+                                mWeek.saturday = day;
+                                break;
+                            case "sunday":
+                                mWeek.sunday = day;
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             });
@@ -84,6 +86,67 @@ public class AdminEditWeekActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mEditableDayOfWeek = "monday";
                 Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.monday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditTuesday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "tuesday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.tuesday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditWednesday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "wednesday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.wednesday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditThursday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "thursday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.thursday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditFriday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "friday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.friday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditSaturday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "saturday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.saturday);
+                mStartForResult.launch(intent);
+            }
+        });
+
+        mButtonEditSunday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mEditableDayOfWeek = "sunday";
+                Intent intent = getIntentAdminEditDay();
+                intent.putExtra("day", mWeek.sunday);
                 mStartForResult.launch(intent);
             }
         });
@@ -103,6 +166,7 @@ public class AdminEditWeekActivity extends AppCompatActivity {
 
     public Intent getIntentAdminEditDay(){
         Intent intent = new Intent(this, AdminEditDayActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         return intent;
     }
 

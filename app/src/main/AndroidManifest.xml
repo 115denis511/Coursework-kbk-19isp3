@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Courseworkkbk19isp3">
         <activity
+            android:name=".UserWatchDayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserWatchWeekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserWatchGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserSetGroupActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminEditDayActivity"
             android:exported="true" />
         <activity
@@ -23,7 +35,8 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
